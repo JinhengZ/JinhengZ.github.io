@@ -1,9 +1,46 @@
 body {
-  background-color: powderblue;
+  background-image:url('../image/temple.gif');
+  background-repeat:repeat;
+  background-size:cover;
+  background-position: center center;
+
+}
+/* Add a black background color to the top navigation */
+.nav {
+  background-color: #191970;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.nav a:hover {
+  background-color: #4B0082;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.nav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 h1 {
-  color: blue;
+  color: antiquewhite;
+}
+h2{
+  color: navajowhite;
+}
+ul{
+  color: navajowhite;
 }
 p {
-  color: red;
+  color: white;
 }
