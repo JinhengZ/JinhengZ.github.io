@@ -18,7 +18,7 @@ function sendmail(){
         };
 
         emailjs.send('service_p4schuv','template_o9jzx42',contactParams)
-            .then(function(res){ console.log('SUCCESS!', response.status, response.text);
+            .then(function(response){ console.log('SUCCESS!', response.status, response.text);
             },
                 function(error) {
                     console.log('FAILED...', error);
