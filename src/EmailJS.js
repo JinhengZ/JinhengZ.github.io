@@ -42,26 +42,26 @@ function validate() {
     let user_email = document.getElementById('user_email').value;
     let user_message = document.getElementById('user_message').value;
 
-        //alert(user_fname)
-        if (user_lname === "" || user_fname === "" || user_phone === "" || user_message=== "" || user_email === "") {
+        alert(user_fname)
+        if (user_lname === "" || user_fname === "" || user_phone === "" || user_message === "" || user_email === "") {
             inputempty();
             error();
             console.log("Email failed to send, because something went wrong")
         } else {
-            //sendmail(user_lname.value,user_fname.value,user_phone.value,user_message.value,user_email.value)
+            sendmail(user_lname,user_fname,user_phone,user_message,user_email);
             success();
-            console.log("email sent")
+            console.log("Email sent")
         }
 
 }
 
 function sendmail() {
     emailjs.send('service_p4schuv', 'template_o9jzx42',{
-        first_name: user_fname,
-        last_name: user_lname,
-        phone_number: user_phone,
-        email_address: user_email,
-        message: user_message,
+        user_fname: user_fname.value,
+        user_lname: user_lname.value,
+        user_phone: user_phone.value,
+        user_email: user_email.value,
+        user_message: user_message.value,
     });
 
 }
