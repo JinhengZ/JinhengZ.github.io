@@ -48,7 +48,7 @@ function validate() {
             error();
             console.log("Email failed to send, because something went wrong")
         } else {
-            sendmail(user_lname,user_fname,user_phone,user_message,user_email);
+            //endmail(user_lname,user_fname,user_phone,user_message,user_email);
             success();
             console.log("Email sent")
         }
