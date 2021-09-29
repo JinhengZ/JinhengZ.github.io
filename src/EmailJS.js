@@ -17,7 +17,7 @@ function success(){
 
 function error(){
     Swal.fire({
-        title:"Oops...!",
+        title:"Oops...! Please fill all blanks.",
         test:"Failed to send message because something went wrong",
         icon:"error",
         button:"OK",
@@ -34,6 +34,17 @@ function inputempty(){
     });
 }
 
+function InpHasLetter()
+{
+    let y = false;
+    var x=document.forms["contactMe"]["user_phone"].value;
+    if (isNaN(x))
+    {
+        y = true;
+    }
+    return y;
+}
+
 
 function validate() {
     let user_lname = document.getElementById('user_lname').value;
@@ -42,16 +53,23 @@ function validate() {
     let user_email = document.getElementById('user_email').value;
     let user_message = document.getElementById('user_message').value;
 
-        alert(user_fname)
+
         if (user_lname === "" || user_fname === "" || user_phone === "" || user_message === "" || user_email === "") {
             inputempty();
             error();
             console.log("Email failed to send, because something went wrong")
-        } else {
-            //endmail(user_lname,user_fname,user_phone,user_message,user_email);
-            success();
-            console.log("Email sent")
-        }
+        }else if(InpHasLetter()===true){
+            Swal.fire({
+                title:"Oops...! Please check your phone number's format",
+                test:"Failed to send message because the phone number is wrong format",
+                icon:"error",
+                button:"OK",
+        })}
+        else{
+        sendmail(user_lname,user_fname,user_phone,user_message,user_email);
+        success();
+        console.log("Email sent")
+    }
 
 }
 
