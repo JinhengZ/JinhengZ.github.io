@@ -45,7 +45,20 @@ function InpHasLetter()
     return y;
 }
 
+function emailError(){
+    document.getElementById("user_email").style.border = "1px solid black";
+    document.getElementById("user_email").placeholder = "xyz@domain.domain";
 
+
+    var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if( emailformat.test(document.getElementById("user_email").value)){
+        return true;
+    }else{
+        document.getElementById("user_email").style.border = "2px solid red";
+        document.getElementById("user_email").placeholder = "Invalid Email";
+        return false;
+    }
+}
 function validate() {
     let user_lname = document.getElementById('user_lname').value;
     let user_fname = document.getElementById("user_fname").value;
@@ -64,8 +77,15 @@ function validate() {
                 test:"Failed to send message because the phone number is wrong format",
                 icon:"error",
                 button:"OK",
-        })}
-        else{
+            })
+        }else if(emailError()===false){
+            Swal.fire({
+                title:"Oops...! Please check your email's format",
+                test:"Failed to send message because the phone number is wrong format",
+                icon:"error",
+                button:"OK",
+            })
+        } else{
         sendmail(user_lname,user_fname,user_phone,user_message,user_email);
         success();
         console.log("Email sent")
