@@ -59,6 +59,8 @@ function emailError(){
         return false;
     }
 }
+
+
 function validate() {
     let user_lname = document.getElementById('user_lname').value;
     let user_fname = document.getElementById("user_fname").value;
@@ -67,7 +69,7 @@ function validate() {
     let user_message = document.getElementById('user_message').value;
 
 
-        if (user_lname === "" || user_fname === "" || user_phone === "" || user_message === "" || user_email === "") {
+        if (user_lname === "" || user_fname === "" || user_phone === "" || user_message === ""|| user_email === "") {
             inputempty();
             error();
             console.log("Email failed to send, because something went wrong")
@@ -81,7 +83,7 @@ function validate() {
         }else if(emailError()===false){
             Swal.fire({
                 title:"Oops...! Please check your email's format",
-                test:"Failed to send message because the phone number is wrong format",
+                test:"Failed to send message because the format of email is wrong format",
                 icon:"error",
                 button:"OK",
             })
