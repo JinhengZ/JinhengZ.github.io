@@ -1,142 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-
-    <title>CISC474 JinhengZhang's Website</title>
+    <title>JinhengZhang's Homepage</title>
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        nav {
-            position: relative;
-            left: 400px;
-            top: -300px;
-            border: 3px solid #73AD21;
-        }
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-
-        .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color:  #4B0082;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: midnightblue;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
-
-
-
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("user_XFdzTdNqw9XMEvhvx7UHP");
-        })();
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-211587995-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-211587995-1');
-    </script>
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-
-        <div class="nav" >
-            <a class="active" href="./index.html">Home</a>
-            <a href="./src/aboutMe.html">About Me</a>
-            <a href="./project.html">Project</a>
-            <a href="https://github.com/JinhengZ/JinhengZ.github.io">View by Github</a>
-            <a href="../src/contactMe.html">Contact Me</a>
-            <a href="../src/resume.html">Resume</a>
-
-
-            <div class="dropdown">
-                <button class="dropbtn">Class Links
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="https://mattm401.github.io/">Syllabus For CISC474</a><br>
-                    <a href="https://jdw1023.github.io">Previous Student</a><br>
-                    <a href="https://jakescreen.github.io">Next Student</a><br>
+<div class="entireWeb">
+        <div id="header">
+            <header class = "navHeader">
+                <div class = "navBar">
+                    <div class="navBar-Logo">
+                    <a href="https://wustl.edu/"><img src="/image/wustlLogo.png" class="wustlLogo" alt=""></a>
+                    </div>
+                    <div class="navBar-Column">
+                        <nav class="navBar-ColumnInner">
+                            <a href="./index.html">Home</a>
+                            <a href="./src/resume.html">CV</a>
+                            <a href="#">Research Experience</a>
+                            <a href="#">Hobby</a>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-
-
+            </header>
+            <hr>
         </div>
 
+        <div class="main">
+            <div class="mainLeftPart">
+                        <div class="authorAvatar">
+                            <img src="/image/jinhengZhang.jpg" alt="Jinheng Zhang" itemprop="image">
+                        </div>
+
+                        <div class="authorContent">
+                            <h3 class="authorName" itemprop="name">Jinheng Zhang</h3>
+                            <div class="authorBio" itemprop="description">
+                                <p>Computer Science, Graduate Student at <a href="https://wustl.edu/">WUSTL</a></p>
+                            </div>
+                        </div>
+
+                        <div class="authorConnectionWrap">
+                            <p><i class="fas fa-phone"></i> (314) 657-5603</p>
+                            <p><i class="fas fa-envelope"></i> jinheng@wustl.edu</p>
+                            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://github.com/JinhengZ" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+
+                            </a>
+                        </div>
+            </div>
+            <div class="mainRightPart">
+                <p>Hey, Y'all!!!! Welcome to my page. I am currently reading my graduate program in Washington University in St.Louis.</p>
+                <p>I received my bachelor's degree in University of Delaware.</p>
 
 
+                <p>It located in a very beautiful and peaceful town. It has the BEST ice cream shop named UDariy!</p>
+                <p>I am really interested in Computer Security ,especially for Cloud Security.</p>
+            </div>
+        </div>
 
-<h1>Welcome to Jinheng Zhang's Website!!!</h1>
-
-
-<p><b>The Name Go By In Class: </b>Jinheng</p>
-<p><b>Full Name: </b>Jinheng Zhang</p>
-
-<img src="./image/jinhengzhang.jpeg" style="top:83px; left:80px" alt ="selfie" width="275" height="275" >
-
-
-<h2>Web Development I Interested:</h2>
-<ul>
-    <li>Developing a game</li>
-    <li>Developing a website that can communicate with humans</li>
-    <li>Developing a shopping website which better than Amazon</li>
-</ul>
-
-
-
-
-
-<script>
-    /**
-     User ID user_XFdzTdNqw9XMEvhvx7UHP
-     Access Token 1eeacb21dbe9ea757423d34b90395a0c
-     **/
-</script>
+        <div class="footer">
+            <hr>
+            <p>"© Copyright 2023 Jinheng Zhang."</p>
+        </div>
+</div>
 
 </body>
 </html>
