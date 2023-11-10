@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #F5F5DC;
+  background-color: rgb(201, 201, 179);
   background-size: cover;
   background-position: center;
 }
@@ -159,3 +159,47 @@ hr {
   font-size: 40px; /* or any other size. You can also use em, rem, %, etc. */
   color: rebeccapurple; /* LinkedIn brand color, you can change it as you like */
 }
+
+
+.masterTxt {
+  font-size: 30px; /* Adjust as needed */
+  background: linear-gradient( to bottom, red 30%, green 70%); /* Adjust the percentage to control the transition point */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bachelorTxt {
+  font-size: 30px; /* Adjust as needed */
+  background: linear-gradient(to bottom ,blue 30%, yellow 70%); /* Adjust the percentage to control the transition point */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.academicSection {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 20px; /* Adjust the space between the text and the image */
+}
+
+.text-content {
+  flex-grow: 1;
+}
+
+.washUBearLogo{
+  flex-shrink: 0;
+  width: auto; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio of the image */
+  max-width: 200px;
+  padding-right: 5px;
+}
+
+.blueHenLogo{
+   flex-shrink: 0;
+   width: auto; /* Adjust the width as needed */
+   height: auto; /* Keeps the aspect ratio of the image */
+   max-width: 200px;
+   padding-top:10px;
+   padding-right: 5px;
+ }
