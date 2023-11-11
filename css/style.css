@@ -12,6 +12,13 @@ body {
   background-position: center;
 }
 
+.customCursor {
+  cursor: url("../image/cursorLogo.png"), auto;
+  /*cursor: pointer;*/
+}
+
+
+
 .entireWeb {
   display: flex; /* This will create a flex container */
   flex-direction: column; /* This will stack the children vertically */
@@ -41,6 +48,7 @@ body {
 }
 
 .navBar-Column a{
+  cursor: url("../image/cursorClickableLogo.png"), auto;
   position: relative;
   /*font-family: Arial, cursive;*/
   font-size: 30px;
@@ -74,6 +82,7 @@ body {
 }
 
 .wustlLogo{
+  cursor: url("../image/cursorClickableLogo.png"), auto;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -151,11 +160,13 @@ hr {
 }
 
 .authorConnectionWrap .fab.fa-linkedin {
+  cursor: url("../image/cursorClickableLogo.png"), auto;
   font-size: 40px; /* or any other size. You can also use em, rem, %, etc. */
   color: #0077B5; /* LinkedIn brand color, you can change it as you like */
 }
 
 .authorConnectionWrap .fab.fa-github {
+  cursor: url("../image/cursorClickableLogo.png"), auto;
   font-size: 40px; /* or any other size. You can also use em, rem, %, etc. */
   color: rebeccapurple; /* LinkedIn brand color, you can change it as you like */
 }
