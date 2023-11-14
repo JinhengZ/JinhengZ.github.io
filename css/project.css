@@ -16,33 +16,12 @@ body {
     cursor: url("../image/cursorLogo.png"), auto;
     /*cursor: pointer;*/
 }
-
-
 .entireWeb {
     display: flex; /* This will create a flex container */
     flex-direction: column; /* This will stack the children vertically */
     min-height: 100vh;
     width: 100%; /* Adjust the width as needed */
 }
-
-.header, .main, .footer {
-    width: 100%;
-}
-
-
-.navHeader {
-    position: relative;
-    top: 0;
-    left: 0;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    border: 2px solid lightslategrey;
-    box-shadow: 0 0 20px antiquewhite, /* More depth */ inset 0 0 10px dimgrey, /* Inner shadow */ inset 0 0 40px dimgrey;
-}
-
 .navBar-Column a {
     cursor: url("../image/cursorClickableLogo.png"), auto;
     position: relative;
@@ -53,7 +32,6 @@ body {
     margin-left: 40px;
 
 }
-
 .navBar-Column a::before {
     content: '';
     position: absolute;
@@ -64,11 +42,9 @@ body {
     background: black;
     transition: .3s;
 }
-
 .navBar-Column a:hover::before {
     width: 100%;
 }
-
 .navBar-Logo {
 
     width: 30%;
@@ -76,7 +52,6 @@ body {
     float: left;
 
 }
-
 .wustlLogo {
     cursor: url("../image/cursorClickableLogo.png"), auto;
     width: 100%;
@@ -87,7 +62,6 @@ body {
     align-items: center;
 
 }
-
 .navBar-Column {
     float: right;
     width: 70%;
@@ -95,7 +69,6 @@ body {
     padding: 10px;
     top: 50%;
 }
-
 .navBar-ColumnInner {
     width: 100%;
     height: 100%;
@@ -104,29 +77,119 @@ body {
     align-items: center;
 }
 
-.main {
+
+section {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 20px;
+    width: calc(100% - 40px); /* Adjust width based on padding */
+}
+
+.projectGraph{
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Ensures the image does not spill out of the container */
+
+}
+.projectGraph img{
+    margin:0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;/* This makes the image cover the available space without stretching */
+}
+
+
+
+
+.projectTitle {
+
+    /*display: inline-block;*/
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: lightslategray;
+
+    text-align: center;
+
+    cursor: url("../image/cursorClickableLogo.png"), auto;
+
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: background-color 0.5s;
+
+    box-shadow: 0 5px #666;
+    transform: perspective(1px) translateZ(0);
+
+    animation: pulse 2s infinite;
+
+
+
+}
+a.projectTitle{
+    text-decoration: none;
+}
+
+/*Set Annimation for project title*/
+@keyframes pulse {
+    0% { transform: scale(1.0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.0); }
+}
+
+.projectTitle:hover {
+    background-color: burlywood;
+}
+
+
+.project{
     display: flex;
-    overflow: auto;
-    padding-bottom: 2vh;
-    /*background-color: #A49A87;*/
-    flex: 1;
-    margin-top: 3px;
-    /*background: linear-gradient(to right, #A49A87 50%, #A49A89 50%);*/
+    justify-content: space-around; /* This will space out the divs evenly */
 }
 
-.mainLeftPart {
-    width: 48%;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 1); /* Adds a subtle shadow to the right */
-    padding-top: 10vh;
-    padding-left: 10%;
+.project > .card {
+
+    margin: 5px; /* Spacing around each div */
+    padding: 1px; /* Padding inside each div */
+    border: 5px solid slategray; /* Border for visual separation */
+
 }
 
-.mainRightPart {
-    width: 62%;
-    border-left: 3px solid #dcdcdc; /* Adds a subtle line separator */
-    padding-left: 20px;
+.card {
+    width: 20%;
+    position: relative;
+    padding: 20px;
+    border: 10px solid #000;
+
+    margin-bottom: 50px; /* Add bottom margin to make room for the bubble */
 }
 
+.bubble {
+    position: absolute;
+    top: 100%; /* Position the bubble below the card */
+    left:50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    width: 40vh;
+    background-color: #f9f9f9;
+    color: #555;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 10px;
+    /* Hide the bubble using opacity */
+    opacity: 0;
+    /* Transition for the bubble */
+    transition: visibility 0s, opacity 0.5s linear;
+    z-index: 10;
+    /*margin-left: 20px;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    border: 3px solid #ddd; /* Subtle border */
+}
+
+.card:hover .bubble {
+    /* Show the bubble when hovering */
+    visibility: visible;
+    opacity: 1;
+}
 
 .footer {
     margin-top: 3px;
@@ -138,107 +201,4 @@ body {
 
     border: 2px solid lightslategrey;
     box-shadow: 0 0 20px antiquewhite, /* More depth */ inset 0 0 10px dimgrey, /* Inner shadow */ inset 0 0 11px dimgrey;
-}
-
-hr {
-    border: 0;
-    height: 2px;
-    /*background: #333; !* Dark grey line *!*/
-    background-image: linear-gradient(#ccc, #333, #ccc); /* Gradient line */
-}
-
-.authorAvatar img {
-    width: 25vw; /* 10% of the viewport's width */
-    height: auto;
-}
-
-.authorConnectionWrap .fab.fa-linkedin {
-    cursor: url("../image/cursorClickableLogo.png"), auto;
-    font-size: 40px; /* or any other size. You can also use em, rem, %, etc. */
-    color: #0077B5; /* LinkedIn brand color, you can change it as you like */
-}
-
-.authorConnectionWrap .fab.fa-github {
-    cursor: url("../image/cursorClickableLogo.png"), auto;
-    font-size: 40px; /* or any other size. You can also use em, rem, %, etc. */
-    color: rebeccapurple; /* LinkedIn brand color, you can change it as you like */
-}
-
-
-.masterTxt {
-    font-size: 30px; /* Adjust as needed */
-    background: linear-gradient(to bottom, red 30%, green 70%); /* Adjust the percentage to control the transition point */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.bachelorTxt {
-    font-size: 30px; /* Adjust as needed */
-    background: linear-gradient(to bottom, blue 30%, yellow 70%); /* Adjust the percentage to control the transition point */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.academicSection {
-    display: flex;
-    align-items: center; /* Aligns items vertically in the center */
-    gap: 20px; /* Adjust the space between the text and the image */
-}
-
-.text-content {
-    flex-grow: 1;
-}
-
-.washUBearLogo {
-    flex-shrink: 0;
-    width: auto; /* Adjust the width as needed */
-    height: auto; /* Keeps the aspect ratio of the image */
-    max-width: 200px;
-    padding-right: 5px;
-}
-
-.blueHenLogo {
-    flex-shrink: 0;
-    width: auto; /* Adjust the width as needed */
-    height: auto; /* Keeps the aspect ratio of the image */
-    max-width: 200px;
-    padding-top: 10px;
-    padding-right: 5px;
-}
-
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.project {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.project:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.project p {
-    color: #333;
-}
-
-.project a {
-    text-decoration: none;
-    color: #007bff;
 }
