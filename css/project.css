@@ -10,12 +10,12 @@ body {
     background-color: rgb(201, 201, 179);
     background-size: cover;
     background-position: center;
+    cursor: url("../image/cursorLogo.png"), auto;
+
+
 }
 
-.customCursor {
-    cursor: url("../image/cursorLogo.png"), auto;
-    /*cursor: pointer;*/
-}
+
 .entireWeb {
     display: flex; /* This will create a flex container */
     flex-direction: column; /* This will stack the children vertically */
